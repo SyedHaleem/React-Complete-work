@@ -7,7 +7,7 @@ function KidPage() {
   return (
     <>
     <Navbar/>
-    <div className='min-h-screen'> 
+    <div className='min-h-screen mt-20'> 
     <KidCards/>
     </div>
     <Footer/>

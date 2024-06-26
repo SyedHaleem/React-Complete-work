@@ -7,7 +7,7 @@ function MenPage() {
   return (
     <>
     <Navbar/>
-    <div className='min-h-screen'> 
+    <div className='min-h-screen mt-20'> 
     <MenCards/>
     </div>
     <Footer/>

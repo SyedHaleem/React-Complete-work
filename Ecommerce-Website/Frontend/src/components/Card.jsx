@@ -2,15 +2,8 @@ import React, { useState } from "react";
 import StarRatings from "react-star-ratings";
 import Image2 from '../assets/img2.jpg';
 
-function Card() {
-  const product = {
-    id: 1,
-    image: Image2,
-    title: "Sample Product Title",
-    price: 29.99,
-    description: "This is a sample product description. It gives details about the product.",
-    rating: 4,
-  };
+function Card({product}) {
+ 
 
   const Truncate = (string, number) => {
     if (!string) {
@@ -26,14 +19,14 @@ function Card() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="py-20 w-[300px]">
+    <div className="mt-10 w-[300px] mx-10">
       <div className="container mx-auto">
         <div
-          className="bg-white shadow-md rounded-lg p-4 relative transition-all duration-500 ease-in-out transform hover:scale-95 hover:shadow-[0px_0px_5px_5px_rgba(204,204,204,1)]"
+          className="bg-white shadow-md rounded-lg overflow-hidden p-4 relative transition-all duration-500 ease-in-out transform hover:scale-95 hover:shadow-[0px_0px_5px_5px_rgba(204,204,204,1)]"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <img className="w-full h-48 object-contain" src={product.image} alt={product.title} />
+          <img className="w-full h-48 object-contain " src={product.image} alt={product.title} />  {/* object-cover object-center */}
           <div className="mt-4">
             <h5
               className="text-base font-bold"
@@ -44,10 +37,10 @@ function Card() {
             <p className="mt-2 text-sm text-gray-400"> 
               {Truncate(product.description, 55)}
             </p>
-            <p className="mt-2 text-base font-bold text-red-600">
+            <p className="mt-3 text-base font-bold text-red-600">
               ${product.price}
             </p>
-            <div className="mt-4 flex items-center">
+            <div className=" flex items-center">
               <StarRatings
                 rating={rating}
                 starRatedColor="#ffc107"
