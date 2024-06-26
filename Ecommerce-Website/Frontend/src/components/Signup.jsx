@@ -12,7 +12,7 @@ function Signup() {
   return (
     <div className='flex h-screen items-center justify-center'>
 <div  className='w-[550px]  ' >
-  <div className=" modal-box dark:bg-slate-800 dark:text-white ">
+  <div className=" modal-box dark:bg-slate-800 dark:text-white relative  transition-all duration-500 ease-in-out transform hover:scale-95 hover:shadow-2lg">
     <form method="dialog" onSubmit={handleSubmit(onSubmit)}>
       <Link to='/' className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</Link>
     
