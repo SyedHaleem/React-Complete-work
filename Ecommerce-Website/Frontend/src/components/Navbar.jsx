@@ -34,7 +34,7 @@ function Navbar() {
   }, []);
 
   return (
-    <div className={`w-full fixed top-0 z-50 ${sticky ? "sticky-navbar shadow-md bg-slate-200 duration-200 transition-all  ease-in-out dark:bg-gray-800 " : ""} ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
+    <div className={`w-full fixed top-0 z-50 ${sticky ? "sticky-navbar shadow-md bg-slate-300 duration-200 transition-all  ease-in-out dark:bg-gray-800 " : ""} ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
       <div className='max-w-screen-2xl container mx-auto md:px-20 px-4'>
         <div className="navbar">
           <div className="navbar-start">

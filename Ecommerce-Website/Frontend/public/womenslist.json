@@ -5,7 +5,8 @@
     "title":"Sample Product Title",
     "description": "This is a sample product description. It gives details about the product.",
     "price": 29.99,
-    "rating": 4.5
+    "rating": 4.5,
+    "discountRate": 35
   },
 
   {
@@ -14,7 +15,8 @@
     "title":"Sample Product Title",
     "description": "This is a sample product description. It gives details about the product.",
     "price": 29.99,
-    "rating": 4.5
+    "rating": 4.5,
+    "discountRate": 35
   },
 
   {
@@ -42,7 +44,8 @@
     "title":"Sample Product Title",
     "description": "This is a sample product description. It gives details about the product.",
     "price": 29.99,
-    "rating": 4.5
+    "rating": 4.5,
+    "discountRate": 35
   },
 
   
@@ -62,7 +65,8 @@
     "title":"Sample Product Title",
     "description": "This is a sample product description. It gives details about the product.",
     "price": 29.99,
-    "rating": 4.5
+    "rating": 4.5,
+    "discountRate": 35
   },
 
   
@@ -72,7 +76,8 @@
     "title":"Sample Product Title",
     "description": "This is a sample product description. It gives details about the product.",
     "price": 29.99,
-    "rating": 4.5
+    "rating": 4.5,
+    "discountRate": 35
   },
   
   {
@@ -81,7 +86,8 @@
     "title":"Sample Product Title",
     "description": "This is a sample product description. It gives details about the product.",
     "price": 29.99,
-    "rating": 4.5
+    "rating": 4.5,
+    "discountRate": 35
   },
 
   
@@ -100,7 +106,8 @@
     "title":"Sample Product Title",
     "description": "This is a sample product description. It gives details about the product.",
     "price": 29.99,
-    "rating": 4.5
+    "rating": 4.5,
+    "discountRate": 35
   },
 
   {
@@ -109,7 +116,8 @@
     "title":"Sample Product Title",
     "description": "This is a sample product description. It gives details about the product.",
     "price": 29.99,
-    "rating": 4.5
+    "rating": 4.5,
+    "discountRate": 35
   },
 
   {
@@ -127,7 +135,8 @@
     "title":"Sample Product Title",
     "description": "This is a sample product description. It gives details about the product.",
     "price": 29.99,
-    "rating": 4.5
+    "rating": 4.5,
+    "discountRate": 35
   },
 
   {
@@ -136,7 +145,8 @@
     "title":"Sample Product Title",
     "description": "This is a sample product description. It gives details about the product.",
     "price": 29.99,
-    "rating": 4.5
+    "rating": 4.5,
+    "discountRate": 35
   },
 
   {
