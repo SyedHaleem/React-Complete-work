@@ -34,12 +34,12 @@ function Navbar() {
   }, []);
 
   return (
-    <div className={`w-full fixed top-0 z-50 ${sticky ? "sticky-navbar shadow-md bg-base-500 duration-200 transition-all  ease-in-out" : ""} ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
+    <div className={`w-full fixed top-0 z-50 ${sticky ? "sticky-navbar shadow-md bg-slate-200 duration-200 transition-all  ease-in-out dark:bg-gray-800 " : ""} ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
       <div className='max-w-screen-2xl container mx-auto md:px-20 px-4'>
         <div className="navbar">
           <div className="navbar-start">
-          <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div className="dropdown dark:bg-slate-900 dark:text-white ">
+      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden dark:bg-slate-800 ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"
@@ -55,7 +55,7 @@ function Navbar() {
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow dark:bg-slate-900 dark:text-white">
         <li><Link to='/'>Home</Link></li>
         <li>
           <a>Catagories</a>
@@ -68,7 +68,7 @@ function Navbar() {
         <li> <Link to='/cart'>Cart</Link></li>
       </ul>
     </div>
-            <Link to='/' className="text-2xl font-bold cursor-pointer">ClothStore</Link>
+            <Link to='/' className="text-2xl font-bold cursor-pointer mx-3" >ClothStore</Link>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
@@ -93,7 +93,7 @@ function Navbar() {
           </div>
           <div className="navbar-end flex items-center space-x-10">
             <div className="hidden md:block">
-              <label className="px-3 py-2 border rounded-md flex items-center gap-2">
+            <label className={`px-3 py-2 ${sticky ? "border-black" : "border"} dark:border rounded-md flex items-center gap-2`}>
                 <input type="text" className="grow outline-none dark:bg-slate-900 dark:text-white" placeholder="Search" />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -19,10 +19,10 @@ function Card({product}) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="mt-10 w-[300px] mx-10">
+    <div className="mt-10 w-[300px] mx-5 ">
       <div className="container mx-auto">
         <div
-          className="bg-white shadow-md rounded-lg overflow-hidden p-4 relative transition-all duration-500 ease-in-out transform hover:scale-95 hover:shadow-[0px_0px_5px_5px_rgba(204,204,204,1)]"
+          className="bg-slate-50 shadow-md rounded-lg overflow-hidden p-4 relative transition-all duration-500 ease-in-out transform hover:scale-95 hover:shadow-[0px_0px_5px_5px_rgba(204,204,204,1)] dark:bg-slate-800 dark:text-white hover:dark:shadow-custom-slate"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -51,7 +51,7 @@ function Card({product}) {
               <button
                 className={`bg-green-500 hover:bg-green-700 text-white py-2 px-4 border rounded ml-7 ${
                   isHovered ? "opacity-100" : "opacity-0"
-                } transition-opacity duration-700 ease-in-out transition`}
+                } transition-opacity duration-700 ease-in-out transition dark:border-green-700 `}
               >
                 Add to cart
               </button>
