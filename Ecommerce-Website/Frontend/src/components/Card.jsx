@@ -1,7 +1,17 @@
-import React, { useState } from "react";
-import StarRatings from "react-star-ratings";
+// Card.jsx
+
+import React, { useContext, useState } from 'react';
+import StarRatings from 'react-star-ratings';
+import { Shoplist } from '../store/store-list'; // Adjust the path as necessary
 
 function Card({ product }) {
+  const { dispatch } = useContext(Shoplist);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const addToCart = (product) => {
+    dispatch({ type: 'ADD_TO_CART', payload: { ...product, quantity: 1 } });
+  };
+
   const Truncate = (string, number) => {
     if (!string) {
       return null;
@@ -9,11 +19,8 @@ function Card({ product }) {
     if (string.length <= number) {
       return string;
     }
-    return string.slice(0, number) + "...";
+    return string.slice(0, number) + '...';
   };
-
-  const [rating, setRating] = useState(product.rating);
-  const [isHovered, setIsHovered] = useState(false);
 
   const calculateDiscountedPrice = (price, discountRate) => {
     return (price - (price * discountRate) / 100).toFixed(2);
@@ -27,7 +34,6 @@ function Card({ product }) {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          {/* Conditional Discount Tag */}
           {product.discountRate >= 0 && (
             <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold py-1 px-2 rounded">
               {product.discountRate}% OFF
@@ -66,15 +72,16 @@ function Card({ product }) {
             </div>
             <div className="flex items-center mt-2">
               <StarRatings
-                rating={rating}
+                rating={product.rating}
                 starRatedColor="#ffc107"
                 starEmptyColor="#e4e5e9"
                 starDimension="20px"
                 starSpacing="1px"
               />
               <button
+                onClick={() => addToCart(product)}
                 className={`bg-green-500 hover:bg-green-700 text-white py-2 px-4 border rounded ml-7 ${
-                  isHovered ? "opacity-100" : "opacity-0"
+                  isHovered ? 'opacity-100' : 'opacity-0'
                 } transition-opacity duration-700 ease-in-out transition dark:border-green-700`}
               >
                 Add to cart

@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaShoppingCart } from "react-icons/fa";
 import Login from './Login';
+import { Shoplist } from '../store/store-list';
 
 function Navbar() {
+  const { cart } = useContext(Shoplist);
   const [sticky, setSticky] = useState(false);
   const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light');
 
@@ -84,11 +86,20 @@ function Navbar() {
                 </details>
               </li>
               <li>
-                <Link to='/cart' className="flex items-center">
-                  <FaShoppingCart style={{ marginRight: "0.2rem" }} />
-                  Cart
-                </Link>
-              </li>
+  <Link to='/cart' className="flex items-center relative">
+    <span className="relative my-1">
+      <FaShoppingCart style={{ marginRight: "0.2rem" }} />
+      {cart.length > 0 && (
+        <span className="absolute top-0 right-0 transform translate-x-full -translate-y-1/2 inline-block px-2 py-1 text-xs leading-none bg-red-600 text-white rounded-full">
+          {cart.length}
+        </span>
+      )}
+    </span>
+    {/* <span className="ml-3">Cart</span> */}
+  </Link>
+</li>
+
+
             </ul>
           </div>
           <div className="navbar-end flex items-center space-x-10">

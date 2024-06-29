@@ -14,7 +14,7 @@ function Sales() {
   const filterData = list.filter((data) => data.discountRate >= 0);
 
   const initialDays = 0;
-  const initialHours = 5;
+  const initialHours = 6;
   const initialMinutes = 0;
   const initialSeconds = 0;
 
@@ -111,7 +111,7 @@ function Sales() {
             <img src={logoImage} alt="Logo" className="h-14" />
           </div>
           <div className="flex items-center space-x-4 text-red-500">
-            {Object.keys(timeLeft).length > 0 && (
+            {Object.keys(timeLeft).length > 0 && ( 
               <>
                 <div className="flex items-baseline">
                   <p className="text-2xl font-bold text-black">{timeLeft.days}</p>

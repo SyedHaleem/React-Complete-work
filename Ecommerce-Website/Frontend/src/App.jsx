@@ -6,20 +6,21 @@ import MenPage from './catagories/MenPage';
 import WomenPage from './catagories/WomenPage';
 import KidPage from './catagories/KidPage';
 import Signup from './components/Signup';
+import { ShopListProvider } from './store/store-list'; 
 
 function App() {
   return (
     <div className='dark:bg-slate-900 dark:text-white'>
-      <Routes>
-        
-        <Route path='/' element={<Homee/>} />
-        <Route path='/cart' element={<CartPage />} />
-        <Route path='/mens' element={<MenPage />} />   // Correct route path and element
-        <Route path='/womens' element={<WomenPage />} />
-        <Route path='/kids' element={<KidPage />} />
-        <Route path='/signup' element={<Signup />} />
-
-    </Routes>
+      <ShopListProvider>
+        <Routes>
+          <Route path='/' element={<Homee/>} />
+          <Route path='/cart' element={<CartPage />} />
+          <Route path='/mens' element={<MenPage />} />
+          <Route path='/womens' element={<WomenPage />} />
+          <Route path='/kids' element={<KidPage />} />
+          <Route path='/signup' element={<Signup />} />
+        </Routes>
+      </ShopListProvider>
     </div>
   );
 }
