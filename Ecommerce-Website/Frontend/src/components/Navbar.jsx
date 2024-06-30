@@ -36,7 +36,7 @@ function Navbar() {
   }, []);
 
   return (
-    <div className={`w-full fixed top-0 z-50 ${sticky ? "sticky-navbar shadow-md bg-slate-300 duration-200 transition-all  ease-in-out dark:bg-gray-800 " : ""} ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
+    <div className={`w-full fixed top-0 z-50 ${sticky ? "sticky-navbar shadow-md bg-slate-200 duration-200 transition-all  ease-in-out dark:bg-gray-800 " : ""} ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
       <div className='max-w-screen-2xl container mx-auto md:px-20 px-4'>
         <div className="navbar">
           <div className="navbar-start">
@@ -87,7 +87,7 @@ function Navbar() {
               </li>
               <li>
   <Link to='/cart' className="flex items-center relative">
-    <span className="relative my-1">
+    <span className="relative  text-lg">
       <FaShoppingCart style={{ marginRight: "0.2rem" }} />
       {cart.length > 0 && (
         <span className="absolute top-0 right-0 transform translate-x-full -translate-y-1/2 inline-block px-2 py-1 text-xs leading-none bg-red-600 text-white rounded-full">
@@ -104,8 +104,8 @@ function Navbar() {
           </div>
           <div className="navbar-end flex items-center space-x-10">
             <div className="hidden md:block">
-            <label className={`px-3 py-2 ${sticky ? "border-black" : "border"} dark:border rounded-md flex items-center gap-2`}>
-                <input type="text" className="grow outline-none dark:bg-slate-900 dark:text-white" placeholder="Search" />
+            <label className={`px-3 py-2 ${sticky ? "border border-black bg-slate-200 dark:bg-slate-800 border border-white" : "border "} dark:border rounded-md flex items-center gap-2  dark:bg-slate-900`}>
+                <input type="text" className={`grow outline-none ${sticky ? "placeholder-black bg-slate-200 dark:bg-slate-800 dark:  ":""} dark:placeholder-white  dark:bg-slate-900 dark:text-white `} placeholder="Search " />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"

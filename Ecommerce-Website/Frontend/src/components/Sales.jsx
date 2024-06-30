@@ -133,7 +133,7 @@ function Sales() {
             )}
           </div>
         </div>
-        <div dark:bg-slate-800 dark:text-white>
+        <div  slider-container dark:bg-slate-800 dark:text-white>
           <Slider {...settings}>
             {filterData.map((product, index) => (
               <Card key={product.id} product={product} />
